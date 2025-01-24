@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Streaming</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #000000, #1a1a1a);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Video Section */
+        .video-section {
+            position: relative;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: auto;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            color: #ffffff;
+        }
+
+        .video-overlay h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .video-overlay p {
+            font-size: 18px;
+            color: #d4d4d4;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .video-overlay .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .video-overlay .buttons button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #e50914;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(229, 9, 20, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-overlay .buttons button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(229, 9, 20, 0.7);
+        }
+
+        .video-overlay .buttons button.secondary {
+            background: #444;
+            color: #fff;
+        }
+
+        .video-overlay .buttons button.secondary:hover {
+            background: #555;
+            box-shadow: 0 8px 20px rgba(68, 68, 68, 0.5);
+        }
+
+        /* Playlist Section */
+        .playlist {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            background: #161616;
+        }
+
+        .playlist h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .playlist ul {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            list-style: none;
+        }
+
+        .playlist ul li {
+            flex: 0 0 auto;
+            background: #222;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 150px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .playlist ul li:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .playlist ul li img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .playlist ul li .details {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .playlist ul li .details h3 {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .playlist ul li .details span {
+            font-size: 14px;
+            color: #bbbbbb;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .video-overlay h1 {
+                font-size: 32px;
+            }
+
+            .video-overlay p {
+                font-size: 16px;
+            }
+
+            .playlist ul li {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Video Section -->
+        <div class="video-section">
+            <video id="mainVideo" src="v09044g40000cu3skdfog65ok8rhftb0.mp4" controls></video>
+            <div class="video-overlay">
+                <h1>The Cinematic Experience</h1>
+                <p>
+                    Enjoy a truly immersive cinematic experience with stunning visuals and a captivating story. Watch it now!
+                </p>
+                <div class="buttons">
+                    <button id="playButton">Play</button>
+                    <button id="pauseButton" class="pauseButton">Pause</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist Section -->
+        <div class="playlist">
+            <h2>Related Videos</h2>
+            <ul>
+                <li>
+                    <img src="IMG_3172.png" alt="Video 1">
+                    <div class="details">
+                        <h3>Video Title 1</h3>
+                        <span>Duration: 10:45</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="thumbnail2.jpg" alt="Video 2">
+                    <div class="details">
+                        <h3>Video Title 2</h3>
+                        <span>Duration: 8:30</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="thumbnail3.jpg" alt="Video 3">
+                    <div class="details">
+                        <h3>Video Title 3</h3>
+                        <span>Duration: 12:10</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Video Controls
+        const video = document.getElementById('mainVideo');
+        const playButton = document.getElementById('playButton');
+        const pauseButton = document.getElementById('pauseButton');
+        const addToWatchlistButton = document.getElementById('addToWatchlist');
+
+        playButton.addEventListener('click', () => {
+            video.play();
+        });
+
+        pauseButton.addEventListener('click', () => {
+            video.pause();
+        });
+
+        addToWatchlistButton.addEventListener('click', () => {
+            alert('Added to Watchlist!');
+        });
+    </script>
+</body>
+</html>

@@ -1,4 +1,58 @@
-function _0x24b7() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Video</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">Add Video</h2>
+    <form id="videoForm" class="space-y-4">
+      <div>
+        <label for="title" class="block text-sm font-medium text-gray-700">Video Title</label>
+        <input type="text" id="title" name="title" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+      <div>
+        <label for="videoId" class="block text-sm font-medium text-gray-700">Masukan ID</label>
+        <input type="text" id="videoId" name="videoId" required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+      <button type="submit"
+        class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md">Add Video</button>
+    </form>
+    <p id="statusMessage" class="mt-4 text-sm text-gray-600"></p>
+    
+    <div id="linkContainer" class="mt-4 space-y-2 hidden">
+      <p class="text-lg font-medium text-gray-700">Access your links:</p>
+      <!-- Generated Links with Copy Button -->
+      <div class="flex items-center space-x-2">
+        <input id="link1" type="text" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md" />
+        <button onclick="copyToClipboard('link1')" class="bg-blue-500 text-white px-3 py-1 rounded-md">Copy</button>
+      </div>
+      <div class="flex items-center space-x-2">
+        <input id="link2" type="text" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md" />
+        <button onclick="copyToClipboard('link2')" class="bg-blue-500 text-white px-3 py-1 rounded-md">Copy</button>
+      </div>
+      <div class="flex items-center space-x-2">
+        <input id="link3" type="text" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md" />
+        <button onclick="copyToClipboard('link3')" class="bg-blue-500 text-white px-3 py-1 rounded-md">Copy</button>
+      </div>
+      <div class="flex items-center space-x-2">
+        <input id="link4" type="text" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md" />
+        <button onclick="copyToClipboard('link4')" class="bg-blue-500 text-white px-3 py-1 rounded-md">Copy</button>
+      </div>
+      <div class="flex items-center space-x-2">
+        <input id="link5" type="text" readonly class="w-full px-3 py-2 border border-gray-300 rounded-md" />
+        <button onclick="copyToClipboard('link5')" class="bg-blue-500 text-white px-3 py-1 rounded-md">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function _0x24b7() {
     const _0x45211b = [
         'stringify',
         'preventDef',
@@ -250,3 +304,6 @@ document[_0x13ffec(0x139) + _0x13ffec(0x16f)](_0x13ffec(0x14a))[_0x13ffec(0x110)
         console[_0x372472(0x112)](_0x1fe7a5[_0x372472(0x162)], _0x46aa72), document[_0x372472(0x139) + _0x372472(0x16f)](_0x1fe7a5[_0x372472(0x115)])[_0x372472(0x12a) + 't'] = _0x1fe7a5[_0x372472(0x10b)];
     }
 });
+  </script>
+</body>
+</html>
